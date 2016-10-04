@@ -84,7 +84,7 @@ included.  For example:
 ## Local Paths
 
 As of version 2.0.0 you can provide a path to a local directory that contains a
-package. Local paths can be saved using `npm install -S` or
+package. Local path packages can be saved using `npm install -S` or
 `npm install --save`, using any of these forms:
 
     ../foo/bar
@@ -102,8 +102,9 @@ in which case they will be normalized to a relative path and added to your
       }
     }
 
+The local package will be copied to the `npm-prefix(1)`.
+
 This feature is helpful for local offline development and creating
 tests that require npm installing where you don't want to hit an
 external server, but should not be used when publishing packages
 to the public registry.
-
